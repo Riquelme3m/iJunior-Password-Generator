@@ -1,0 +1,31 @@
+input[type="checkbox"] {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgb(232 231 239);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+input[type="checkbox"]:hover {
+    border-color: rgb(164 255 171);
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgb(164 255 171);
+    border: none;
+    position: relative;
+    
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 52%;
+    width: 12px;
+    height: 12px;
+    background-image: url('../images/icon-check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+}

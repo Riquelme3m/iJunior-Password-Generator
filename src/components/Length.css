@@ -1,0 +1,32 @@
+.character-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    flex: 50%;
+    font-size: 1.1rem;
+}
+
+.character-container p {
+    flex: 50%;
+    font-size: 20px;
+    text-align: end;
+    color: rgb(164 255 171);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, var(--strong) 0%, var(--black) 0%);
+    outline: none;
+    border-radius: 4px;
+    overflow: visible;
+    position: relative;
+    margin: 12px 0;
+}
