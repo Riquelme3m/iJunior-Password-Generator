@@ -4,7 +4,7 @@ import "./Generate.css"
 const Generate = () => {
     return (
         <div>
-            <button id="generate" onClick="Copy-password">GENERATE 
+            <button id="generate">GENERATE 
                 <svg class="arrow-right" width="8" height="8" 
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
                     <path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/>
