@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Generate from './components/Generate';
-import Password from './components/Password';
-import Checkbox from './components/Checkbox';
-import Length from './components/Length';
+import Generate from './components/Generate/Generate';
+import Password from './components/Password/Password';
+import Checkbox from './components/Checkbox/Checkbox';
+import Length from './components/Length/Length';
 import './App.css';
-import Strength from './components/Strength';
+import Strength from './components/Strength/Strength';
 
 const App = () => {
     const [passwordProps, setPasswordProps] = useState({
@@ -86,6 +86,7 @@ const App = () => {
 
     return (
         <div className="app">
+            <h1>Password Generator</h1>
             <Password {...passwordProps} password={password} />
             <div className='options'>
             <Length onChange={handleLengthChange} />
