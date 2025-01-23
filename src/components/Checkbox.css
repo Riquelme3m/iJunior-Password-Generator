@@ -1,0 +1,43 @@
+/* Base styles for the checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgb(232, 231, 239);
+    width: 16px;
+    height: 16px;
+    border-radius: 4px; /* Optional: Makes it look like a square checkbox */
+    cursor: pointer;
+    position: relative;
+    margin-right: 8px; /* Add space to the right of the checkbox */
+}
+
+/* Hover state */
+input[type="checkbox"]:hover {
+    border-color: rgb(164, 255, 171);
+}
+
+/* Checked state */
+input[type="checkbox"]:checked {
+    background-color: rgb(164, 255, 171);
+    border: none;
+    position: relative;
+}
+
+/* Checkmark using ::after */
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Center the checkmark */
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background-image: url('../images/icon-check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+}
+
+/* Add some space between the checkbox container and other elements (optional) */
+div {
+    margin-bottom: 10px; /* Adjust the space between the checkbox and other elements */
+}
