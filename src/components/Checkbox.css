@@ -5,7 +5,7 @@ input[type="checkbox"] {
     border: 2px solid rgb(232, 231, 239);
     width: 16px;
     height: 16px;
-    border-radius: 4px; /* Optional: Makes it look like a square checkbox */
+    top: 4px;
     cursor: pointer;
     position: relative;
     margin-right: 8px; /* Add space to the right of the checkbox */
@@ -27,7 +27,7 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked::after {
     content: '';
     position: absolute;
-    top: 50%; /* Center the checkmark */
+    top: 60%; /* Center the checkmark */
     left: 50%;
     width: 12px;
     height: 12px;

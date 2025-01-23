@@ -87,6 +87,7 @@ const App = () => {
     return (
         <div className="app">
             <Password {...passwordProps} password={password} />
+            <div className='options'>
             <Length onChange={handleLengthChange} />
             <div className="checkbox-container">
                 <Checkbox
@@ -116,6 +117,7 @@ const App = () => {
             </div>
             <Strength strength={strength} />
             <Generate onGenerate={generatePassword} />
+            </div>
         </div>
     );
 };
