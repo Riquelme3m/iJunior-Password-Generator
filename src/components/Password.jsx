@@ -4,7 +4,7 @@ import "./Password.css"
 const Password = () => {
     return (
         <div className="container-password">
-            <p>P4$5W0rD!</p>
+            <p id='password'>P4$5W0rD!</p>
             <button id="copy">
                 <svg width="21" height="24" 
                     xmlns="http://www.w3.org/2000/svg">

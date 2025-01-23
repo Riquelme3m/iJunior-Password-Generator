@@ -22,11 +22,43 @@ input[type="range"] {
     -moz-appearance: none;
     appearance: none;
     width: 100%;
-    height: 8px;
-    background: linear-gradient(to right, var(--strong) 0%, var(--black) 0%);
+    height: 6px;
+    background: rgb(24, 24, 24);
     outline: none;
-    border-radius: 4px;
     overflow: visible;
     position: relative;
     margin: 12px 0;
+    background-image: linear-gradient(rgb(164 255 171), rgb(164 255 171));
+    background-size: calc((100% - 18px) * var(--ratio)) 100%;
+    background-repeat: no-repeat;
 }
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+    border: 2px solid rgb(164 255 171);
+    background: black;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    border: 2px solid rgb(164 255 171);
+    background: black;
+}
+

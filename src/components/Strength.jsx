@@ -5,8 +5,8 @@ const Strength = () => {
     return (
         <div className="container-strength">
             <h2>STRENGTH</h2>
-            <div>
-                <h1>MEDIUM</h1>
+            <div id='strength-data'>
+                <h1>$HOLDER$</h1>
                 <div className='blocks'>
                     <div id='1'></div>
                     <div id='2'></div>

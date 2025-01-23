@@ -16,6 +16,23 @@
     }
 }
 
+#strength-data {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
 .blocks {
-    
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+.blocks div{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    box-sizing: border-box;
+    height: 20px;
+    width: 8px;
+    border: 2px solid white;
 }
