@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./Length.css"
 
 
-const Length = ({ onChange }) => {
+const Length = ({ onChange, evaluateStrength }) => {
     const [length, setLength] = useState(10);
 
     const handleChange = (e) => {
@@ -20,7 +20,7 @@ const Length = ({ onChange }) => {
             <input
                 type="range"
                 id="length"
-                min="0"
+                min="1"
                 max="20"
                 value={length}
                 onChange={handleChange}

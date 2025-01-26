@@ -7,12 +7,15 @@ const Strength = ({ strength }) => {
     // Determine the number of filled blocks based on the password strength
     const getBlockClass = (index) => {
         if (strength === 'hard') {
-            return 'strong'; // Fill all blocks for 'hard' strength
+            return 'hard'; // Fill all blocks for 'hard' strength
         }
         if (strength === 'medium') {
             return index < 3 ? 'medium' : ''; // Fill first 3 blocks for 'medium' strength
         }
-        return index < 2 ? 'weak' : ''; // Fill first 2 blocks for 'easy' strength
+        if (strength === 'easy') {
+            return index < 2 ? 'easy' : ''; // Fill first 2 blocks for 'easy' strength
+        }
+        return index < 1 ? 'very easy' : ''; // Fill first 1 blocks for 'very easy' strength
     };
 
     return (

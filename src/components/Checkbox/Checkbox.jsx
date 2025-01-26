@@ -3,7 +3,7 @@ import "./Checkbox.css"
 
 const Checkbox = ({ id, label, checked, onChange }) => {
     return (
-        <div id={id}>
+        <div className={id}>
             <input
                 type="checkbox"
                 id={id}

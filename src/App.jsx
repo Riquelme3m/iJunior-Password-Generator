@@ -15,7 +15,8 @@ const App = () => {
         includeSymbols: true,
     });
 
-    const [password, setPassword] = useState('');
+    const [password, setPassword] = useState('P4$5W0rD!');
+
     const [strength, setStrength] = useState('easy'); // Track password strength
 
     const generatePassword = () => {
@@ -49,32 +50,45 @@ const App = () => {
         setPassword(newPassword);
 
         // Determine strength of password
-        const strength = evaluateStrength(newPassword);
+        const strength = evaluateStrength(passwordProps);
         setStrength(strength);
     };
 
-    const evaluateStrength = (password) => {
-        const length = password.length;
-        const hasUppercase = /[A-Z]/.test(password);
-        const hasLowercase = /[a-z]/.test(password);
-        const hasNumbers = /\d/.test(password);
-        const hasSymbols = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    const evaluateStrength = (passwordProps) => {
+        let score = 0;
+        const { length, includeUppercase, includeLowercase, includeNumbers, includeSymbols } = passwordProps;
 
-        // Define strength based on conditions
-        if (length >= 12 && hasUppercase && hasLowercase && hasNumbers && hasSymbols) {
-            return 'hard';
-        } else if (length >= 8 && (hasUppercase || hasLowercase) && (hasNumbers || hasSymbols)) {
-            return 'medium';
-        } else {
-            return 'easy';
-        }
+        // confere se pelo menos uma opção de caractere esta selecionada
+        const hasCharacterTypes = includeUppercase || includeLowercase || includeNumbers || includeSymbols;
+        if (!hasCharacterTypes) return '-';
+
+        // pontuação de 0 a 4
+        if (includeUppercase) score++;
+        if (includeLowercase) score++;
+        if (includeNumbers) score++;
+        if (includeSymbols) score++;
+        
+
+        // pontuação exponencial para tamanho da senha
+        const lengthScore = Math.floor(Math.pow(length, 1.3) / 3);
+        score *= lengthScore;
+        console.log(score);
+
+        // Determine strength based on total score
+        if (score >= 52) return 'hard';
+        if (score >= 14) return 'medium';
+        if (score >= 7) return 'easy';
+        return 'very easy';
     };
 
     const handleCheckboxChange = (key) => {
-        setPasswordProps((prev) => ({
-            ...prev,
-            [key]: !prev[key],
-        }));
+        const newProps = {
+            ...passwordProps,
+            [key]: !passwordProps[key]
+        };
+        setPasswordProps(newProps);
+        const strength = evaluateStrength(newProps);
+        setStrength(strength);
     };
 
     const handleLengthChange = (length) => {
@@ -82,6 +96,8 @@ const App = () => {
             ...prev,
             length,
         }));
+        const strength = evaluateStrength(passwordProps);
+        setStrength(strength);
     };
 
     return (
