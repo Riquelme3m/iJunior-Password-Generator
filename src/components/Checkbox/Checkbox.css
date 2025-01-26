@@ -3,6 +3,7 @@ input[type="checkbox"] {
     appearance: none;
     background-color: transparent;
     border: 2px solid rgb(232, 231, 239);
+    border-radius: 0%;
     width: 16px;
     height: 16px;
     top: 4px;
@@ -37,7 +38,3 @@ input[type="checkbox"]:checked::after {
     transform: translate(-50%, -50%);
 }
 
-/* Add some space between the checkbox container and other elements (optional) */
-div {
-    margin-bottom: 10px; /* Adjust the space between the checkbox and other elements */
-}

@@ -10,7 +10,7 @@
   width: 100%;
   padding: 25px;
   background-color: rgb(36 35 43);
-  gap: 20px;
+  gap: 25px;
 }
 
 h1 {
@@ -19,14 +19,15 @@ h1 {
   color: rgb(85 84 93);
 }
 
-.checkboxes {
+.checkbox-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-.checkboxes > * {
-  display: flex;
-  gap: 10px;
+@media screen and (max-width: 480px) {
+  .app {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
 }
-

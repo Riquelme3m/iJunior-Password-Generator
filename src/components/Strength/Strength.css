@@ -4,7 +4,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     width: 100%;
-    height: 45px;
+    height: 50px;
     background-color: rgb(24 23 31);
     padding: 20px;
 }
@@ -16,20 +16,20 @@
 .container-strength h1 {
     font-size: 15px;
     color: white;
+    place-self: center;
 }
 
 #strength-data {
     display: flex;
     flex-direction: row;
     gap: 8px;
-    margin-top: 30px;
 }
 
 .blocks {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
 }
 
 .blocks div {
@@ -37,24 +37,27 @@
     flex-direction: row;
     gap: 5px;
     box-sizing: border-box;
-    height: 20px;
-    width: 8px;
-    border: 2px solid white;
+    height: 25px;
+    width: 7px;
+    border: 1.5px solid white;
     background-color: transparent;
     transition: all 0.3s ease;
 }
 
 /* Weak (easy) password */
-.blocks .weak {
+.blocks .easy {
+    border: red;
     background-color: red;
 }
 
 /* Medium strength password */
 .blocks .medium {
+    border: yellow;
     background-color: yellow;
 }
 
 /* Strong (hard) password */
-.blocks .strong {
+.blocks .hard {
+    border: green;
     background-color: green;
 }
