@@ -14,7 +14,7 @@
 
 ### Links
 
-- Solution URL: []()
+- Solution URL: [https://i-junior-password-generator.vercel.app/](https://i-junior-password-generator.vercel.app/)
 
 ### Built With
 
